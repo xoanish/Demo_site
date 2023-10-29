@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* body{
+} */
+
+:root{
+    --primary-color: #000839;
+    --primary-shades: #00020b;
+    --para-color: #80849c;
+    --helper-color: #1264fa;
+    --white: #fff;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color: #000839 ;
+}
+
+.para{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #80849c;
+}
+
+/* Header And   NAVBAR STYLING */
+
+.header{
+    height: 9.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5.4rem;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    font-size: 1.5rem;
+}
+
+.navbar-list .navbar-btn{
+    padding: 1.2rem;
+    background-color: #fff;
+    border: 1px solid #1264fa;
+    color: #1264fa;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active{
+
+    color: #1264fa;
+}
+
+.navbar-list .navbar-btn:hover,
+.navbar-list .navbar-btn:active{
+    background-color: #1264fa;
+    color: #fff;
+}
+
+.navbar-link{
+    text-transform: uppercase;
+}
+
+.mobile-nav-icon{
+    font-size: 4rem;
+    color: #000839;
+}
+
+.mobile-navbar-btn{
+    display: none;
+}
+
+.mobile-nav-icon[name="close"]{
+    display: none;
+}
+
+/* REUSABLE CODE */
+
