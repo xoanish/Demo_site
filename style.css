@@ -56,6 +56,7 @@ h1,h2,h3,h4{
     align-items: center;
     justify-content: space-between;
     padding: 0 5.4rem;
+    position: relative;
 }
 
 .logo{
@@ -226,7 +227,7 @@ h1,h2,h3,h4{
 }
 
 .hero-image img{
-    height: 60%;
+    /* height: 60%; */
     box-shadow: 0 0 10rem 0 rgba (0, 0, 0, 0.1);
 }
 
@@ -251,3 +252,116 @@ h1,h2,h3,h4{
     margin: 0;
 }
 
+/* MEDIA QUERIES START */
+
+@media (max-width: 1250px){
+    .container{
+        padding: 0 6rem;
+    }
+    html{
+        font-size: 56.25%;
+    }
+}
+
+@media( max-width:980px){
+    .container{
+        max-width: 96rem;
+    }
+
+    .section-hero .grid-two-column{
+        grid-template-columns: 1fr;
+    }
+
+    .section-hero .hero-icons .grid-two-column{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        transform: translateX(100%);
+        transition: all 0.3s linear;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+    }
+
+    .navbar .navbar-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .navbar-link{
+        color: #fff;
+    }
+
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 99;
+    }
+
+    .active .navbar{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+        z-index: 99;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close"]{
+        display: block;
+        color: #fff;
+        z-index: 9999;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu"]{
+
+        display: none;
+        color: #fff;
+    }
+
+    .hero-image{
+        width: 60%;
+    }
+
+    .section::before{
+        height: 30%;
+    }
+
+    .hero-image img{
+        width: 60%;
+    }
+
+    .hero-image .hero-img-overlay{
+        width: 80%;
+        left: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+
+    .hero-image img{
+        width: 80%;
+    }
+
+    .hero-image .hero-img-overlay{
+        width: 90%;
+        left: 0;
+    }
+}
